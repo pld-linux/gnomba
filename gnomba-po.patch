@@ -1,0 +1,17 @@
+--- gnomba-0.6.2/po/pl.po~	Wed Aug  4 08:13:24 2004
++++ gnomba-0.6.2/po/pl.po	Wed Aug  4 08:13:24 2004
+@@ -2,12 +2,11 @@
+ # Copyright (C) YEAR Free Software Foundation, Inc.
+ # Cezary Jackiewicz <cjackiewicz@poczta.onet.pl>, 1999.
+ #
+-#, fuzzy
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: gnomba 0.6.2\n"
+ "POT-Creation-Date: 2000-02-19 20:36-0500\n"
+-"PO-Revision-Date: wto 22 lut 2000 15:39:53 EST\n"
++"PO-Revision-Date: 2000-02-22 15:39-0500\n"
+ "Last-Translator: Cezary Jackiewicz <cjackiewicz@poczta.onet.pl>\n"
+ "Language-Team: Polish <LL@li.org>\n"
+ "MIME-Version: 1.0\n"
