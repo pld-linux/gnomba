@@ -5,7 +5,7 @@ Summary(pl):	Przegl±darka zasobów SMB
 Summary(wa):	Foyteuse SMB pol Gnome
 Name:		gnomba
 Version:	0.6.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
@@ -15,6 +15,8 @@ URL:		http://gnomba.darkcorner.net/
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
+BuildRequires:	automake
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	samba >= 2.0.5
 
@@ -49,7 +51,11 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 %setup -q
 
 %build
+rm -rf missing
 gettextize --copy --force
+aclocal
+autoconf
+automake -a -c 
 %configure
 %{__make} \
 	CODEPAGEDIR="/etc/samba/codepages" \
