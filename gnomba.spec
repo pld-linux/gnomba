@@ -68,8 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	sysdir=%{_applnkdir}/Network/Misc
 
-gzip -9nf README ChangeLog TODO NEWS BUGS AUTHORS
-
 %find_lang %{name}
 
 %clean
@@ -77,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README ChangeLog TODO NEWS BUGS AUTHORS
 %attr(755,root,root) %{_bindir}/gnomba
 %{_applnkdir}/Network/Misc/gnomba.desktop
 %{_pixmapsdir}/*
