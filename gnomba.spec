@@ -8,6 +8,7 @@ Version:	0.6.2
 Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
+Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	http://gnomba.darkcorner.net/tars/%{name}-%{version}.tar.gz
 Icon:		gnomba-logo.xpm
