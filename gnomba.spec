@@ -41,13 +41,13 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 
 %build
 ./configure --prefix=/usr --sysconfdir=%{_sysconfdir}
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
      
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
-make install prefix=$RPM_BUILD_ROOT/usr sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
+%{__make} install prefix=$RPM_BUILD_ROOT/usr sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
