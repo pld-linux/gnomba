@@ -37,7 +37,7 @@ Windows du réseau local. Il permets une utilisation semblable à celle
 du "Voisinage réseau" de Windows.
 
 %description -l pl
-Gnomba jest przegl±dark± zasobów sieciowych wykorzystujac± protokó³
+Gnomba jest przegl±dark± zasobów sieciowych wykorzystuj±c± protokó³
 smb. Pozwala na przegl±danie grup, komputerów i zasobów w "Otoczeniu
 sieciowym"
 
