@@ -52,7 +52,7 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 %build
 rm -rf missing
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
