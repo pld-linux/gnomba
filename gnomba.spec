@@ -5,7 +5,7 @@ Summary(pl):	Przegl±darka zasobów SMB dla GNOME
 Summary(wa):	Foyteuse SMB pol GNOME
 Name:		gnomba
 Version:	0.6.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://gnomba.sourceforge.net/src/%{name}-%{version}.tar.gz
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	sysdir=%{_applnkdir}/Network/Misc
+	sysdir=%{_desktopdir}
 
 %find_lang %{name}
 
@@ -76,6 +76,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog TODO NEWS BUGS AUTHORS
 %attr(755,root,root) %{_bindir}/gnomba
-%{_applnkdir}/Network/Misc/gnomba.desktop
+%{_desktopdir}/gnomba.desktop
 %{_pixmapsdir}/*
 %{_mandir}/man1/*
