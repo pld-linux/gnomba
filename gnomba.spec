@@ -50,7 +50,6 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 
 %build
 gettextize --copy --force
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make} \
 	CODEPAGEDIR="/etc/samba/codepages" \
@@ -64,8 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	sysdir=%{_applnkdir}/Network/Misc
 
-gzip -9nf README ChangeLog TODO NEWS BUGS AUTHORS \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf README ChangeLog TODO NEWS BUGS AUTHORS
 
 %find_lang %{name}
 
