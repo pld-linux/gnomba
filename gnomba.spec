@@ -53,8 +53,8 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 rm -rf missing
 gettextize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 %{__make} \
 	CODEPAGEDIR="/etc/samba/codepages" \
