@@ -20,7 +20,7 @@ BuildRequires:	gtk+-devel
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	samba >= 2.0.5
+Requires:	samba-client >= 2.0.5
 
 %description
 gnomba is a GUI network browser using the smb protocol. It allows
