@@ -1,6 +1,7 @@
 Summary:	Gnome SMB Browser 
 Summary(es):	Explorador SMB para Gnome
 Summary(fr):	Explorateur SMB pour Gnome 
+Summary(pl):	Przegl±darka zasobów SMB
 Summary(wa):	Foyteuse SMB pol Gnome
 Name:		gnomba
 Version:	0.6.2
@@ -8,10 +9,12 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
+Source0:	http://gnomba.darkcorner.net/tars/%{name}-%{version}.tar.gz
 Icon:		gnomba-logo.xpm
-Source0:	http://gnomba.darkcorner.net/tars/%{name}-%{version}.tar.bz2
-Source1:	gnomba.desktop
 URL:		http://gnomba.darkcorner.net/
+BuildRequires:	gettext-devel
+BuildRequires:	gnome-libs-devel
+BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	samba >= 2.0.5
 
@@ -32,6 +35,11 @@ gnomba est un explorateur graphique pour trouver les machines Samba ou
 Windows du réseau local. Il permets une utilisation semblable à celle
 du "Voisinage réseau" de Windows.
 
+%description -l pl
+Gnomba jest przegl±dark± zasobów sieciowych wykorzystujac± protokó³
+smb. Pozwala na przegl±danie grup, komputerów i zasobów w "Otoczeniu
+sieciowym"
+
 %description -l wa
 gnomba est ene foyteuse grafike po trover des éndjoles Samba ou
 Windows sol rantoele locåle. Avou lî vos poloz åjheymint cweri et
@@ -41,30 +49,33 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 %setup -q
 
 %build
-./configure --prefix=/usr --sysconfdir=%{_sysconfdir} \
-  --datadir=%{_datadir}
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
-     
+gettextize --copy --force
+LDFLAGS="-s"; export LDFLAGS
+%configure
+%{__make} \
+	CODEPAGEDIR="/etc/samba/codepages" \
+	LMHOSTSFILE="/etc/samba/lmhosts" \
+	DRIVERFILE="/etc/samba/printers.def"
+
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 
 %{__make} install \
-  prefix=$RPM_BUILD_ROOT%{_prefix} \
-  sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
-  datadir=$RPM_BUILD_ROOT%{_datadir}
+	DESTDIR=$RPM_BUILD_ROOT \
+	sysdir=%{_applnkdir}/Network/Misc
 
-install -d %{_applnkdir}/Network/Misc
-install %{SOURCE1} %{_applnkdir}/Network/Misc
+gzip -9nf README ChangeLog TODO NEWS BUGS AUTHORS \
+	$RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README COPYING ChangeLog
+%doc *.gz
 %attr(755,root,root) %{_bindir}/gnomba
 %{_applnkdir}/Network/Misc/gnomba.desktop
 %{_datadir}/pixmaps/*
+%{_mandir}/man1/*
