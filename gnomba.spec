@@ -1,6 +1,6 @@
-Summary:	Gnome SMB Browser 
+Summary:	Gnome SMB Browser
 Summary(es):	Explorador SMB para Gnome
-Summary(fr):	Explorateur SMB pour Gnome 
+Summary(fr):	Explorateur SMB pour Gnome
 Summary(pl):	Przegl±darka zasobów SMB
 Summary(wa):	Foyteuse SMB pol Gnome
 Name:		gnomba
@@ -54,7 +54,7 @@ rm -rf missing
 gettextize --copy --force
 aclocal
 autoconf
-automake -a -c 
+automake -a -c
 %configure
 %{__make} \
 	CODEPAGEDIR="/etc/samba/codepages" \
