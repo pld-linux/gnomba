@@ -5,9 +5,10 @@
  Name[es]=Explorador SMB para Gnome
  Name[fr]=Explorateur SMB de GNOME
 -Name[ko]=±×³ğ »ï¹Ù ºê¶ó¿ìÁ®
-+Name[ko]=ê·¸ë†ˆ ì‚¼ë°” ë¸Œë¼ìš°ì ¸
- Name[no]=GNOME Samba utforsker
+-Name[no]=GNOME Samba utforsker
 -Name[ru]=GNOME Samba-ÎÁ×ÉÇÁÔÏÒ
++Name[ko]=ê·¸ë†ˆ ì‚¼ë°” ë¸Œë¼ìš°ì ¸
++Name[nb]=GNOME Samba utforsker
 +Name[pl]=PrzeglÄ…darka zasobÃ³w SMB
 +Name[ru]=GNOME Samba-Ğ½Ğ°Ğ²Ğ¸Ğ³Ğ°Ñ‚Ğ¾Ñ€
  Name[wa]=Foyteuse SMB di GNOME
@@ -17,11 +18,11 @@
 +Comment[es]=Un explorador de mÃ¡quinas Samba o Windows para el entorno GNOME
  Comment[fr]=Explorateur de machines Samba ou Windows pour GNOME
 -Comment[ko]=±×³ğ »ï¹Ù ºê¶ó¿ìÁ®
-+Comment[ko]=ê·¸ë†ˆ ì‚¼ë°” ë¸Œë¼ìš°ì ¸
- Comment[no]=Gnome Samba utforsker
 -Comment[ru]=Samba-ÎÁ×ÉÇÁÔÏÒ ÄÌÑ GNOME
 -Comment[wa]=Foyteuse po trover les éndjoles Samba ou Windows
 -Comment[pl]=Przegl±darka zasobów sieciowych
++Comment[ko]=ê·¸ë†ˆ ì‚¼ë°” ë¸Œë¼ìš°ì ¸
++Comment[nb]=Gnome Samba utforsker
 +Comment[pl]=PrzeglÄ…darka zasobÃ³w sieciowych
 +Comment[ru]=Samba-Ğ½Ğ°Ğ²Ğ¸Ğ³Ğ°Ñ‚Ğ¾Ñ€ Ğ´Ğ»Ñ GNOME
 +Comment[wa]=Foyteuse po trover les Ã©ndjoles Samba ou Windows
