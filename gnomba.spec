@@ -13,7 +13,7 @@ Group: X11/GNOME/Network
 Icon: gnomba-logo.xpm
 Source: http://gnomba.darkcorner.net/tars/gnomba-%{ver}.tar.bz2
 URL: http://gnomba.darkcorner.net/
-BuildRoot: /var/tmp/gnomba-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires: samba >= 2.0.5
 
 %description
