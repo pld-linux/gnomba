@@ -3,13 +3,14 @@ Summary(es):	Explorador SMB para Gnome
 Summary(fr):	Explorateur SMB pour Gnome 
 Summary(wa):	Foyteuse SMB pol Gnome
 Name:		gnomba
-Version:	0.5.1
+Version:	0.6.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
 Icon:		gnomba-logo.xpm
 Source0:	http://gnomba.darkcorner.net/tars/%{name}-%{version}.tar.bz2
+Source1:	gnomba.desktop
 URL:		http://gnomba.darkcorner.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	samba >= 2.0.5
@@ -40,14 +41,23 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 %setup -q
 
 %build
-./configure --prefix=/usr --sysconfdir=%{_sysconfdir}
+./configure --prefix=/usr --sysconfdir=%{_sysconfdir} \
+  --datadir=%{_datadir}
 %{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
      
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
-%{__make} install prefix=$RPM_BUILD_ROOT/usr sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
+%{__make} install \
+  prefix=$RPM_BUILD_ROOT%{_prefix} \
+  sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
+  datadir=$RPM_BUILD_ROOT%{_datadir}
+
+install -d %{_applnkdir}/Network/Misc
+install %{SOURCE1} %{_applnkdir}/Network/Misc
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,6 +66,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README COPYING ChangeLog
 %attr(755,root,root) %{_bindir}/gnomba
-%{_applnkdir}/Internet/gnomba.desktop 
-%{_datadir}/locale/*/LC_MESSAGES/gnomba.mo
+%{_applnkdir}/Network/Misc/gnomba.desktop
 %{_datadir}/pixmaps/*
