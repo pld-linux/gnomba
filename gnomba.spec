@@ -75,5 +75,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/gnomba
 %{_applnkdir}/Network/Misc/gnomba.desktop
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
 %{_mandir}/man1/*
