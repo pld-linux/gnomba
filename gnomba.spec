@@ -9,7 +9,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://gnomba.sourceforge.net/src/%{name}-%{version}.tar.gz
-# Source0-md5:	a21c2369a809b8f14af6e5f83471eeb6
+# Source0-md5:	698c40d2755c5b0d467e4de2f2119c0c
 Icon:		gnomba-logo.xpm
 URL:		http://gnomba.sourceforge.net/
 BuildRequires:	gettext-devel
