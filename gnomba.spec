@@ -8,9 +8,9 @@ Version:	0.6.2
 Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://gnomba.darkcorner.net/tars/%{name}-%{version}.tar.gz
+Source0:	http://gnomba.sourceforge.net/src/%{name}-%{version}.tar.gz
 Icon:		gnomba-logo.xpm
-URL:		http://gnomba.darkcorner.net/
+URL:		http://gnomba.sourceforge.net/
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
