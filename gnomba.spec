@@ -51,7 +51,7 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 
 %build
 rm -rf missing
-gettextize --copy --force
+%{__gettextize}
 aclocal
 %{__autoconf}
 %{__automake}
