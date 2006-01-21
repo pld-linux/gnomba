@@ -12,7 +12,6 @@ Source0:	http://gnomba.sourceforge.net/src/%{name}-%{version}.tar.gz
 # Source0-md5:	698c40d2755c5b0d467e4de2f2119c0c
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-po.patch
-Icon:		gnomba-logo.xpm
 URL:		http://gnomba.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
