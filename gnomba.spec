@@ -1,8 +1,8 @@
 Summary:	GNOME SMB Browser
-Summary(es):	Explorador SMB para GNOME
-Summary(fr):	Explorateur SMB pour GNOME
-Summary(pl):	Przegl±darka zasobów SMB dla GNOME
-Summary(wa):	Foyteuse SMB pol GNOME
+Summary(es.UTF-8):   Explorador SMB para GNOME
+Summary(fr.UTF-8):   Explorateur SMB pour GNOME
+Summary(pl.UTF-8):   PrzeglÄ…darka zasobÃ³w SMB dla GNOME
+Summary(wa.UTF-8):   Foyteuse SMB pol GNOME
 Name:		gnomba
 Version:	0.6.2
 Release:	8
@@ -27,24 +27,24 @@ gnomba is a GUI network browser using the smb protocol. It allows
 users to browse workgroups, machines, and shares in a "Network
 Neighborhood."
 
-%description -l es
-gnomba es un explorador gráfico para buscar máquinas Samba o Windows
+%description -l es.UTF-8
+gnomba es un explorador grÃ¡fico para buscar mÃ¡quinas Samba o Windows
 en la red local; similar a como funciona con el susodicho.
 
-%description -l fr
+%description -l fr.UTF-8
 gnomba est un explorateur graphique pour trouver les machines Samba ou
-Windows du réseau local. Il permets une utilisation semblable à celle
-du "Voisinage réseau" de Windows.
+Windows du rÃ©seau local. Il permets une utilisation semblable Ã  celle
+du "Voisinage rÃ©seau" de Windows.
 
-%description -l pl
-Gnomba jest przegl±dark± zasobów sieciowych wykorzystuj±c± protokó³
-smb. Pozwala na przegl±danie grup, komputerów i zasobów w "Otoczeniu
+%description -l pl.UTF-8
+Gnomba jest przeglÄ…darkÄ… zasobÃ³w sieciowych wykorzystujÄ…cÄ… protokÃ³Å‚
+smb. Pozwala na przeglÄ…danie grup, komputerÃ³w i zasobÃ³w w "Otoczeniu
 sieciowym"
 
-%description -l wa
-gnomba est ene foyteuse grafike po trover des éndjoles Samba ou
-Windows sol rantoele locåle. Avou lî vos poloz åjheymint cweri et
-monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
+%description -l wa.UTF-8
+gnomba est ene foyteuse grafike po trover des Ã©ndjoles Samba ou
+Windows sol rantoele locÃ¥le. Avou lÃ® vos poloz Ã¥jheymint cweri et
+monter des pÃ¥rteyes d' Ã©ndjoles windows oudoben eployi leus scrireces.
 
 %prep
 %setup -q
