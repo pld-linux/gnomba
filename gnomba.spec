@@ -1,8 +1,8 @@
 Summary:	GNOME SMB Browser
-Summary(es.UTF-8):   Explorador SMB para GNOME
-Summary(fr.UTF-8):   Explorateur SMB pour GNOME
-Summary(pl.UTF-8):   Przeglądarka zasobów SMB dla GNOME
-Summary(wa.UTF-8):   Foyteuse SMB pol GNOME
+Summary(es.UTF-8):	Explorador SMB para GNOME
+Summary(fr.UTF-8):	Explorateur SMB pour GNOME
+Summary(pl.UTF-8):	Przeglądarka zasobów SMB dla GNOME
+Summary(wa.UTF-8):	Foyteuse SMB pol GNOME
 Name:		gnomba
 Version:	0.6.2
 Release:	8
