@@ -18,9 +18,10 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
+BuildRequires:	rpmbuild(macros) >= 1.565
 BuildRequires:	sed >= 4.0
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	samba-client >= 2.0.5
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 gnomba is a GUI network browser using the smb protocol. It allows
@@ -50,9 +51,7 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-
-sed -i -e 's/
-$//' gnomba.desktop
+%undos gnomba.desktop
 
 %build
 rm -rf missing
