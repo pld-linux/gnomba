@@ -15,7 +15,7 @@ Patch1:		%{name}-po.patch
 URL:		http://gnomba.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	rpmbuild(macros) >= 1.565
