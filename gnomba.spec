@@ -49,8 +49,8 @@ monter des pårteyes d' éndjoles windows oudoben eployi leus scrireces.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 %undos gnomba.desktop
 
 %build
